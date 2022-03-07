@@ -2,13 +2,12 @@
 
 
 1) необходимо залогиниться
-
+```
 POST
-
 http://162.55.220.72:5005/login
-
-`login : str (кроме /)`
-`password : str`
+login : str (кроме /)
+password : str
+```
 
 Приходящий токен необходимо передать во все остальные запросы.
 
@@ -18,18 +17,14 @@ http://162.55.220.72:5005/login
 
 2) http://162.55.220.72:5005/user_info
 
-`req. (RAW JSON)`
-
-`POST`
-
-`age: int`
-
-`salary: int`
-
-`name: str`
-
-`auth_token`
-
+```req. 
+(RAW JSON)
+POST
+age: int
+salary: int
+name: str
+auth_token
+```
 
 resp.
 
@@ -51,14 +46,14 @@ resp.
 ===================
 
 3) http://162.55.220.72:5005/new_data
-
+```
 req.
 POST
 age: int
 salary: int
 name: str
 auth_token
-
+```
 Resp.
 
 ```js
@@ -75,13 +70,14 @@ Resp.
 ===================
 
 4) http://162.55.220.72:5005/test_pet_info
+```
 req.
 POST
 age: int
 weight: int
 name: str
 auth_token
-
+```
 
 Resp.
 ```js
@@ -99,13 +95,14 @@ Resp.
 ===================
 
 5) http://162.55.220.72:5005/get_test_user
+```
 req.
 POST
 age: int
 salary: int
 name: str
 auth_token
-
+```
 Resp.
 ```js
 {'name': name,
@@ -125,10 +122,11 @@ Resp.
 ===================
 
 6) http://162.55.220.72:5005/currency
+```
 req.
 POST
 auth_token
-
+```
 Resp. Передаётся список массив объектов.
 ```js
 [
@@ -151,11 +149,12 @@ Resp. Передаётся список массив объектов.
  ===================
 
 7) http://162.55.220.72:5005/curr_byn
+```
 req.
 POST
 auth_token
 curr_code: int
-
+```
 Resp.
 ```js
 {
