@@ -1,28 +1,39 @@
 ДЗ_3 Postman
-=====
+
 
 1) необходимо залогиниться
+
 POST
+
 http://162.55.220.72:5005/login
-login : str (кроме /)
-password : str
+
+`login : str (кроме /)`
+`password : str`
 
 Приходящий токен необходимо передать во все остальные запросы.
 
-===================
+
 дальше все запросы требуют наличие токена.
-===================
+
 
 2) http://162.55.220.72:5005/user_info
-req. (RAW JSON)
-POST
-age: int
-salary: int
-name: str
-auth_token
+
+`req. (RAW JSON)`
+
+`POST`
+
+`age: int`
+
+`salary: int`
+
+`name: str`
+
+`auth_token`
 
 
 resp.
+
+```js
 {'start_qa_salary':salary,
  'qa_salary_after_6_months': salary * 2,
  'qa_salary_after_12_months': salary * 2.9,
@@ -30,6 +41,7 @@ resp.
                                 'u_age':age,
                                 'u_salary_1.5_year': salary * 4}
                                 }
+```
 
 Тесты:
 1) Статус код 200
@@ -39,6 +51,7 @@ resp.
 ===================
 
 3) http://162.55.220.72:5005/new_data
+
 req.
 POST
 age: int
@@ -47,9 +60,12 @@ name: str
 auth_token
 
 Resp.
+
+```js
 {'name':name,
   'age': int(age),
   'salary': [salary, str(salary*2), str(salary*3)]}
+```
 
 Тесты:
 1) Статус код 200
@@ -68,11 +84,12 @@ auth_token
 
 
 Resp.
+```js
 {'name': name,
  'age': age,
  'daily_food':weight * 0.012,
  'daily_sleep': weight * 2.5}
-
+```
 
 Тесты:
 1) Статус код 200
@@ -90,12 +107,14 @@ name: str
 auth_token
 
 Resp.
+```js
 {'name': name,
  'age':age,
  'salary': salary,
  'family':{'children':[['Alex', 24],['Kate', 12]],
  'u_salary_1.5_year': salary * 4}
   }
+```
 
 Тесты:
 1) Статус код 200
@@ -111,6 +130,7 @@ POST
 auth_token
 
 Resp. Передаётся список массив объектов.
+```js
 [
 {"Cur_Abbreviation": str,
  "Cur_ID": int,
@@ -122,6 +142,7 @@ Resp. Передаётся список массив объектов.
  "Cur_Name": str
 }
 ]
+```
 
 Тесты:
 1) Можете взять любой объект из присланного списка, используйте js random.
@@ -136,6 +157,7 @@ auth_token
 curr_code: int
 
 Resp.
+```js
 {
     "Cur_Abbreviation": str
     "Cur_ID": int,
@@ -144,6 +166,7 @@ Resp.
     "Cur_Scale": int,
     "Date": str
 }
+```
 
 Тесты:
 1) Статус код 200
@@ -158,6 +181,7 @@ Resp.
 4) если возвращается 500 код, переходим к следующей итреации
 5) если получаем 200 код, проверяем response json на наличие поля "Cur_OfficialRate"
 6) если поле есть, пишем в консоль инфу про фалюту в виде response
+```js
 {
     "Cur_Abbreviation": str
     "Cur_ID": int,
@@ -166,4 +190,5 @@ Resp.
     "Cur_Scale": int,
     "Date": str
 }
+```
 7) переходим к следующей итерации
