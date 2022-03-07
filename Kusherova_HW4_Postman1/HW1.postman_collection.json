@@ -1,0 +1,329 @@
+{
+	"info": {
+		"_postman_id": "72cfe598-30a1-4009-9594-ab809babd168",
+		"name": "HW1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "EP_1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://162.55.220.72:5005/get_method?name=Alex&age=25",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"get_method"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Alex"
+						},
+						{
+							"key": "age",
+							"value": "25"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EP_2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Nina",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "31",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "1100",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://162.55.220.72:5005/user_info_3",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"user_info_3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EP_3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test_cu_66@mail.com\",\r\n  \"name\": \"Рестт\",\r\n  \"tasks\": [12],\r\n  \"companies\": [36,37],\r\n  \"hobby\":\"Стрельба из лука, Настолки\",\r\n  \"adres\":\"адрес 1\",\r\n  \"name1\":\"Тестовый, ясен пень\",\r\n  \"surname1\":\"Иванов\",\r\n  \"fathername1\":\"Петров\",\r\n  \"cat\":\"Маруся\",\r\n  \"dog\":\"Ушастый\",\r\n  \"parrot\":\"Васька\",\r\n  \"cavy\":\"Кто ты?\",\r\n  \"hamster\":\"Хомяк\",\r\n  \"squirrel\":\"Белая горячка к нам пришла\",\r\n  \"phone\":\"333 33 33\",\r\n  \"inn\":\"123456789012\",\r\n  \"gender\":\"m\",\r\n  \"birthday\":\"01.01.1900\",\r\n  \"date_start\":\"11.11.2000\"\r\n} \r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://162.55.220.72:5005/object_info_1?name=Petr&age=70&weight=90",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"object_info_1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Petr"
+						},
+						{
+							"key": "age",
+							"value": "70"
+						},
+						{
+							"key": "weight",
+							"value": "90"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EP_4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test_cu_66@mail.com\",\r\n  \"name\": \"Рестт\",\r\n  \"tasks\": [12],\r\n  \"companies\": [36,37],\r\n  \"hobby\":\"Стрельба из лука, Настолки\",\r\n  \"adres\":\"адрес 1\",\r\n  \"name1\":\"Тестовый, ясен пень\",\r\n  \"surname1\":\"Иванов\",\r\n  \"fathername1\":\"Петров\",\r\n  \"cat\":\"Маруся\",\r\n  \"dog\":\"Ушастый\",\r\n  \"parrot\":\"Васька\",\r\n  \"cavy\":\"Кто ты?\",\r\n  \"hamster\":\"Хомяк\",\r\n  \"squirrel\":\"Белая горячка к нам пришла\",\r\n  \"phone\":\"333 33 33\",\r\n  \"inn\":\"123456789012\",\r\n  \"gender\":\"m\",\r\n  \"birthday\":\"01.01.1900\",\r\n  \"date_start\":\"11.11.2000\"\r\n} \r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://162.55.220.72:5005/object_info_2?name=Elena&age=45&salary=2500",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"object_info_2"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Elena"
+						},
+						{
+							"key": "age",
+							"value": "45"
+						},
+						{
+							"key": "salary",
+							"value": "2500"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EP_5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test_cu_66@mail.com\",\r\n  \"name\": \"Рестт\",\r\n  \"tasks\": [12],\r\n  \"companies\": [36,37],\r\n  \"hobby\":\"Стрельба из лука, Настолки\",\r\n  \"adres\":\"адрес 1\",\r\n  \"name1\":\"Тестовый, ясен пень\",\r\n  \"surname1\":\"Иванов\",\r\n  \"fathername1\":\"Петров\",\r\n  \"cat\":\"Маруся\",\r\n  \"dog\":\"Ушастый\",\r\n  \"parrot\":\"Васька\",\r\n  \"cavy\":\"Кто ты?\",\r\n  \"hamster\":\"Хомяк\",\r\n  \"squirrel\":\"Белая горячка к нам пришла\",\r\n  \"phone\":\"333 33 33\",\r\n  \"inn\":\"123456789012\",\r\n  \"gender\":\"m\",\r\n  \"birthday\":\"01.01.1900\",\r\n  \"date_start\":\"11.11.2000\"\r\n} \r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://162.55.220.72:5005/object_info_3?name=Alex&age=23&salary=3000",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"object_info_3"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Alex"
+						},
+						{
+							"key": "age",
+							"value": "23"
+						},
+						{
+							"key": "salary",
+							"value": "3000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EP_6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test_cu_66@mail.com\",\r\n  \"name\": \"Рестт\",\r\n  \"tasks\": [12],\r\n  \"companies\": [36,37],\r\n  \"hobby\":\"Стрельба из лука, Настолки\",\r\n  \"adres\":\"адрес 1\",\r\n  \"name1\":\"Тестовый, ясен пень\",\r\n  \"surname1\":\"Иванов\",\r\n  \"fathername1\":\"Петров\",\r\n  \"cat\":\"Маруся\",\r\n  \"dog\":\"Ушастый\",\r\n  \"parrot\":\"Васька\",\r\n  \"cavy\":\"Кто ты?\",\r\n  \"hamster\":\"Хомяк\",\r\n  \"squirrel\":\"Белая горячка к нам пришла\",\r\n  \"phone\":\"333 33 33\",\r\n  \"inn\":\"123456789012\",\r\n  \"gender\":\"m\",\r\n  \"birthday\":\"01.01.1900\",\r\n  \"date_start\":\"11.11.2000\"\r\n} \r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://162.55.220.72:5005/object_info_4?name=Max&age=39&salary=500",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"object_info_4"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Max"
+						},
+						{
+							"key": "age",
+							"value": "39"
+						},
+						{
+							"key": "salary",
+							"value": "500"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EP_7",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Artem",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "17",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "5000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://162.55.220.72:5005//user_info_2",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"",
+						"user_info_2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
